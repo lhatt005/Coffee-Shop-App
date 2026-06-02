@@ -1,0 +1,73 @@
+.header {
+  background: var(--espresso);
+  padding: 14px 16px 0;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--cream);
+  letter-spacing: -0.5px;
+}
+.logoAccent { color: var(--accent); }
+
+.counts {
+  display: flex;
+  gap: 6px;
+}
+
+.countPill,
+.countPillWish {
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+.countPill {
+  background: rgba(255,255,255,0.12);
+  color: var(--cream);
+}
+.countPillWish {
+  background: rgba(193,122,58,0.25);
+  color: var(--accent);
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 4px 10px;
+  border: none;
+  background: transparent;
+  color: rgba(245,237,214,0.5);
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  transition: all 0.15s;
+}
+.tab:active { opacity: 0.7; }
+
+.tabActive {
+  background: var(--milk);
+  color: var(--espresso);
+}
+
+.tabIcon { font-size: 16px; }

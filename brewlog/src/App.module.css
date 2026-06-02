@@ -1,0 +1,48 @@
+/* App.module.css — layout shell */
+
+/* Full-height column that holds header + scrollable main + fixed bottom nav */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;            /* dvh = dynamic viewport height, handles mobile browser chrome */
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* The scrollable content area between header and bottom nav */
+.main {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;  /* smooth scrolling on iOS */
+  padding-bottom: var(--nav-height);
+}
+
+/* Floating action button (the big "+" to add a café) */
+.fab {
+  position: fixed;
+  bottom: calc(var(--nav-height) + 16px);
+  right: 20px;
+  z-index: 50;
+
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: var(--espresso);
+  color: var(--cream);
+  font-size: 28px;
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(44, 26, 14, 0.35);
+  transition: transform 0.15s;
+}
+
+.fab:active {
+  transform: scale(0.93);
+}

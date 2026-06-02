@@ -1,0 +1,78 @@
+.container { padding-bottom: 16px; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid var(--steam);
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0;
+  border-right: 1px solid var(--steam);
+}
+.stat:last-child { border-right: none; }
+
+.statNum {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--espresso);
+}
+.statLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.mapWrap {
+  position: relative;
+  height: 220px;
+}
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.legend {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10;
+  background: white;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 11px;
+  color: var(--muted);
+  display: flex;
+  gap: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  pointer-events: none;
+}
+.dotVisited, .dotWish {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.dotVisited { background: var(--espresso); }
+.dotWish    { background: var(--accent); }
+
+.list { padding: 16px 16px 0; }
+
+.listTitle {
+  font-family: var(--font-display);
+  font-size: 17px;
+  margin-bottom: 12px;
+  color: var(--espresso);
+}
+
+.empty {
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+  padding: 32px 0;
+}
